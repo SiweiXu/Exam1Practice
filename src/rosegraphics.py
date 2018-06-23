@@ -245,7 +245,7 @@ class RoseWindow(object):
         global _master_Tk
         _master_Tk.update()
 
-    def render(self, seconds_to_pause=None):
+    def render(self, seconds_to_pause: object = None) -> object:
         """
         Updates all the Shapes attached to RoseCanvas objects associated with this RoseWindow, then draws all those Shapes.
         After doing so, pauses the given number of seconds.
