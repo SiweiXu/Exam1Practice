@@ -237,17 +237,23 @@ def problem3b(m, point1):
 
     x = point1.x
     y = point1.y
+    count = 1
+    total = 0
 
     for _ in range(m):
         y = y + 60
         start = rg.Point(x, y)
-        for k in range(m):
-            n = 3 + (2 * k)
-            problem3a(window, start, n)
+        count = count + 2
+        problem3a(window, start, count)
+
+        thi = problem3a(window, start, count)
+        total = total + thi
 
     window.close_on_mouse_click()
+
+    return total
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
